@@ -1,0 +1,325 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  color: #000000;
+  font-weight: 500;
+}
+
+h2,
+h3,
+ul,
+li,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 1160px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #283136;
+}
+
+.main-header {
+  background-color: #eeeeee;
+  margin-bottom: 75px;
+}
+
+.main-navigation {
+  font-size: 16px;
+  line-height: 30px;
+  display: flex;
+}
+
+.main-logo {
+  padding-top: 50px;
+  margin-right: 200px;
+}
+
+.cart {
+  margin-left: auto;
+}
+
+.site-navigation,
+.cart {
+  padding-top: 75px;
+}
+
+.site-navigation {
+  width: 440px;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 240px;
+}
+
+.site-navigation li {
+  margin-right: 50px;
+}
+
+.site-navigation,
+.cart {
+  list-style: none;
+}
+
+.site-navigation a:hover,
+.cart a:hover {
+  color: #fb565a;
+}
+
+.site-navigation a:focus,
+.cart a:focus {
+  border: 1px solid transparent;
+  border-bottom-color: #fb565a;
+}
+
+.services {
+  margin-bottom: 80px;
+}
+
+.divide {
+  margin-bottom: 42px;
+}
+
+.services-list li {
+  min-height: 350px;
+  width: 300px;
+}
+
+.services-photo {
+  margin-bottom: 25px;
+}
+
+.advantages {
+  display: flex;
+  position: relative;
+}
+
+.advantages img {
+  margin-left: auto;
+}
+
+.advantages div {
+  width: 400px;
+  min-height: 280px;
+}
+
+.services-list {
+  list-style: none;
+  display: flex;
+}
+
+.services-list li:not(:last-child) {
+  margin-right: 100px;
+}
+
+.features-header {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.advantages .slogan {
+  margin-bottom: 30px;
+  margin-top: 0;
+  padding-top: 80px;
+}
+
+.slogan {
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;
+}
+
+.presentation h3 {
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.presentation b {
+  font-size: 45px;
+  line-height: 10, 06px;
+}
+
+.percentage {
+  vertical-align: 50%;
+  font-size: 30px;
+}
+
+.statistic,
+.clients-logos {
+  list-style: none;
+}
+
+.contacts h3 {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 30px;
+}
+
+.contacts p {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.social-logos li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 85px;
+  background-color: #e1e1e1;
+  margin-bottom: 5px;
+  border-radius: 50%;
+}
+
+footer b {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: bold;
+}
+
+.sale {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.presentation {
+  display: flex;
+  margin-bottom: 80px;
+}
+
+.presentation .slogan {
+  display: block;
+  font-size: 45px;
+  line-height: 45px;
+  margin-bottom: 35px;
+}
+
+.slogan-lead {
+  margin-bottom: 45px;
+}
+
+.presentation .flex-holder:first-child {
+  width: 660px;
+  margin-right: auto;
+  padding-top: 40px;
+}
+
+.presentation.flex-holder:last-child {
+  width: 360px;
+  margin-left: auto;
+}
+
+.statistic-flex-holder li {
+  width: 100px;
+}
+
+.statistic-flex-holder {
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-header {
+  margin-bottom: 35px;
+}
+
+.orders-list li:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+.presentation-logo {
+  margin-bottom: 42px;
+}
+
+.statistic-header {
+  margin-bottom: 49px;
+}
+
+.statistic b {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.clients-logos {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 45px;
+}
+
+.clients-logos img {
+  opacity: 20%;
+}
+
+.clients-logos img:hover {
+  opacity: 100%;
+}
+
+.clients-logos img:active {
+  opacity: 10%;
+}
+
+.radio {
+  position: absolute;
+  bottom: 85px;
+  left: 560px;
+}
+
+.slide {
+  width: 698px;
+  height: 413px;
+}
+
+.contacts {
+  width: 320px;
+  height: 310px;
+  position: absolute;
+  top: 50px;
+  text-align: center;
+  background-color: white;
+}
+
+.contacts h3 {
+  padding-top: 55px;
+  padding-bottom: 35px;
+}
+
+.contacts p:first-of-type {
+  margin-bottom: 25px;
+}
+
+footer {
+  position: relative;
+}
+
+.footer-flex-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 70px;
+}
+
+.footer-flex-container ul {
+  width: 260px;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-flex-container .wrapper p:first-child {
+  margin-bottom: 20px;
+}
+
+footer .container {
+  margin-bottom: 68px;
+}
