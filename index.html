@@ -20,30 +20,33 @@
             <nav class="main-navigation">
                 <img src="img/index.html.png" alt="лого" class="main-logo">
                 <ul class="site-navigation">
-                    <li><a href=''>СТУДИЯ</a></li>
-                    <li><a href=''>КЛИЕНТЫ</a></li>
-                    <li><a href=''>МАГАЗИН</a></li>
-                    <li><a href=''>КОНТАКТЫ</a></li>
+                    <li><a href=''>Студия</a></li>
+                    <li><a href=''>Клиенты</a></li>
+                    <li><a href=''>Магазин</a></li>
+                    <li><a href=''>Контакаты</a></li>
                 </ul>
                 <ul class="cart">
-                    <li><a href="">КОРЗИНА</a></li>
+                    <li><a href="">Корзина</a></li>
                 </ul>
             </nav>
             <div class="advantages">
                 <div>
                     <p class="slogan">Долго, дорого,
                         скрупулезно.</p>
-                    <p>Математически выверенный дизайн</br>
+                    <p class="description">Математически выверенный дизайн</br>
                         для вашего сайта или мобильного приложения</p>
-                    <a href="">Узнать больше</a>
+                    <a class="info button-decoration red-button" href=""><span>Узнать больше</span></a>
                 </div>
                 <img src="img\slide1.png" alt="слайд1" class="slide">
                 <img src="img\slide2.png" alt="слайд2" class="slide" hidden>
                 <img src="img\slide3.png" alt="слайд3" class="slide" hidden>
                 <form action="#" class="radio">
-                    <input type="radio" name="response" value="slide1" checked>
-                    <input type="radio" name="response" value="slide2">
-                    <input type="radio" name="response" value="slide3">
+                    <input type="radio" name="response" id="slide1" checked>
+                    <label for="slide1"></label>
+                    <input type="radio" name="response" id="slide2">
+                    <label for="slide2"></label>
+                    <input type="radio" name="response" id="slide3">
+                    <label for="slide3"></label>
                 </form>
             </div>
         </div>
@@ -56,24 +59,23 @@
                     <img class="services-photo" src="img/illustration-1.jpg.jpg" alt="веб-сайты">
                     <h2 class="features-header">Веб-Сайты</h2>
                     <p>Мир никогда не будет прежним </br>
-                        После того как увидит ваш<br>
-                        сайт!
+                        После того как увидит ваш сайт!
                     </p>
-                    <a href="">Заказать</a>
+                    <a href="" class="order-button site-button button-decoration red-button"><span>Заказать</span></a>
                 </li>
                 <li>
                     <img class="services-photo" src="img/illustration-2.jpg.jpg" alt="приложения">
                     <h2 class="features-header">Приложения</h2>
                     <p>Покорите топ-10 приложений </br>
                         в Appstore и Google Play</p>
-                    <a href="">Заказать</a>
+                    <a href="" class="order-button application-button button-decoration"><span>Заказать</span></a>
                 </li>
                 <li>
                     <img class="services-photo" src="img/illustration-3.jpg" alt="презентации">
                     <h2 class="features-header">Презентации</h2>
                     <p>Вы даже не подозреваете, </br>
                         насколько вы изумительны!</p>
-                    <a href="">Заказать</a>
+                    <a href="" class="order-button presentation-button button-decoration"><span>Заказать</span></a>
                 </li>
             </ul>
         </section>
@@ -132,32 +134,55 @@
 
         <img src="img/divide copy 2.png" alt="" class="divide">
 
+
     </main>
 
 
     <footer>
         <div id="map" style="width: 100%; height: 415px"></div>
-
         <div class="container">
+            <div class="write-us" hidden>
+                <form action="#" method="get">
+                    <fieldset>
+                        <p>
+                            <legend>Напишите нам</legend>
+                            <button class="close-button" type="button"><img src="img/close-cross.png" alt=""></button>
+                        </p>
+                        <div>
+                            <label for="name">Ваше имя:
+                                <input type="text" placeholder="Имя Фамилия" id="name" class="field" min="5">
+                            </label>
+                        </div>
+                        <div>
+                            <label for="email">Ваш e-mail:
+                                <input type="e-mail" id="email" placeholder="email@example.com" class="field">
+                            </label>
+                        </div>
+                        <label for="text">Текст письма:</label><br>
+                        <textarea placeholder="В свободной форме" id="text" cols="30" rows="10"
+                            class="field"></textarea>
+                        <a class="send button-decoration red-button"><span>Отправить</span></a>
+                    </fieldset>
+            </div>
+
             <section class="contacts">
                 <h3>NЁRDS DESIGN STUDIO</h3>
                 <p>191186, Краснодар, </br>
                     ул. Ставропольская, д. 127</p>
                 <p>тел. +7 (812) 275-75-75</p>
-                <a href="">Напишите нам1</a>
+                <a class="write-button button-decoration red-button"><span>Напишите нам</span></a>
             </section>
-        </div>
-        <div class="footer-flex-container">
-            <ul class="social-logos">
-                <li><a href=""><img src="img/vk-icon.svg" alt="vk"></a></li>
-                <li><a href=""><img src="img/fb-icon.svg" alt="facebook"></a></li>
-                <li><a href=""><img src="img/insta-icon.svg" alt="instagram"></a></li>
-            </ul>
-            <div class="wrapper">
-                <p><b>Давайте дружить, это выгодно!</b></p>
-                <p class="sale">Скидка 10% для друзей из социальных сетей.</p>
+            <div class="footer-flex-container">
+                <ul class="social-logos">
+                    <li><a href=""><img src="img/vk-icon.svg" alt="vk"></a></li>
+                    <li><a href=""><img src="img/fb-icon.svg" alt="facebook"></a></li>
+                    <li><a href=""><img src="img/insta-icon.svg" alt="instagram"></a></li>
+                </ul>
+                <div class="wrapper">
+                    <p><b>Давайте дружить, это выгодно!</b></p>
+                    <p class="sale">Скидка 10% для друзей из социальных сетей.</p>
+                </div>
             </div>
-        </div>
     </footer>
     <script src="js/main.js"></script>
 </body>

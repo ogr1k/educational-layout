@@ -38,6 +38,8 @@ a {
   font-size: 16px;
   line-height: 30px;
   display: flex;
+  margin-bottom: 35px;
+  text-transform: uppercase;
 }
 
 .main-logo {
@@ -75,10 +77,32 @@ a {
   color: #fb565a;
 }
 
+.site-navigation a:active,
+.cart a:active {
+  opacity: 30%;
+  border-bottom-color: transparent;
+  color: black;
+}
+
 .site-navigation a:focus,
 .cart a:focus {
-  border: 1px solid transparent;
+  outline: none;
+  border: 2px solid transparent;
   border-bottom-color: #fb565a;
+}
+
+.main-logo:hover {
+  opacity: 0.8;
+}
+
+.main-logo:active {
+  opacity: 0.3;
+}
+
+.cart a::before {
+  display: inline-block;
+  margin-right: 20px;
+  content: url(../img/cart-icon.png);
 }
 
 .services {
@@ -189,6 +213,7 @@ footer b {
   font-size: 36px;
   line-height: 36px;
   font-weight: bold;
+  position: relative;
 }
 
 .sale {
@@ -306,7 +331,6 @@ footer {
 
 .footer-flex-container {
   display: flex;
-  justify-content: space-around;
   margin-bottom: 70px;
 }
 
@@ -322,4 +346,251 @@ footer {
 
 footer .container {
   margin-bottom: 68px;
+}
+
+.button-decoration {
+  display: inline-flex;
+  color: white;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  width: 240px;
+  height: 50px;
+  background-color: #fb565a;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  margin-top: 45px;
+}
+
+.button-decoration:active {
+  box-shadow: 0 3px 3px rgba(0, 1, 1, 0.5) inset;
+}
+
+.button-decoration:active span {
+  opacity: 0.3;
+}
+
+.services-list .order-button {
+  margin-top: 10px;
+  width: 160px;
+  height: 50px;
+}
+
+.red-button:hover {
+  background-color: #e74246;
+}
+
+.red-button:active {
+  background-color: #d7373b;
+}
+
+.services-list .application-button {
+  background-color: #00ca74;
+}
+
+.services-list .application-button:hover {
+  background-color: #00bc6c;
+}
+
+.services-list .application-button:active {
+  background-color: #00aa62;
+}
+
+.services-list .presentation-button {
+  background-color: #efc84a;
+}
+
+.services-list .presentation-button:hover {
+  background-color: #eab534;
+}
+
+.services-list .presentation-button:active {
+  background-color: #e5a722;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.radio label {
+  background: white;
+  height: 15px;
+  width: 15px;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+input[type="radio"]:checked + label {
+  background: url(../img/active-button.png) no-repeat 50% 50%, white;
+}
+
+ul {
+  list-style: none;
+}
+
+.orders-list li::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  border-top: 2px solid red;
+  margin-right: 10px;
+  padding-bottom: 4px;
+}
+
+.social-logos {
+  margin-right: 137px;
+}
+
+.social-logos li:hover {
+  background: #e74246;
+}
+
+.social-logos li:active {
+  background: #d7373b;
+  box-shadow: 0 -3px 3px rgba(0, 1, 1, 0.1) inset,
+    0 3px 3px rgba(0, 1, 1, 0.1) inset, 3px 0 3px rgba(0, 1, 1, 0.1) inset,
+    -3px 0 3px rgba(0, 1, 1, 0.1) inset;
+}
+
+.social-logos li:active img {
+  opacity: 0.3;
+}
+
+#map {
+  margin-bottom: 70px;
+  position: relative;
+}
+
+.write-us {
+  position: absolute;
+  top: -130px;
+  width: 960px;
+  min-height: 590px;
+  background: white;
+  box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.75);
+  margin-right: 100px;
+  margin-left: 100px;
+  z-index: 10;
+}
+
+.close-button {
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  background: none;
+}
+
+.write-us #name,
+.write-us #email {
+  width: 356px;
+  height: 47px;
+}
+
+.write-us #text {
+  width: 756px;
+  height: 116px;
+}
+
+.write-us input,
+.write-us textarea {
+  margin: 0;
+  padding: 0;
+  border: 2px solid #d6dbdd;
+  border-radius: 4px;
+  outline: none;
+}
+
+fieldset {
+  position: relative;
+  border: 0;
+  padding: 0;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+fieldset div {
+  display: inline-block;
+  width: 360px;
+}
+
+fieldset div:last-of-type {
+  margin-left: 36px;
+}
+
+.write-us p {
+  position: relative;
+  margin-top: 70px;
+  margin-bottom: 40px;
+}
+
+.write-us .close-button {
+  position: absolute;
+  top: 5px;
+  right: -10px;
+}
+
+legend {
+  font-size: 45px;
+  line-height: 45px;
+  margin: 0;
+  padding: 0;
+}
+
+.write-us input::-webkit-input-placeholder,
+.write-us textarea::-webkit-input-placeholder {
+  padding-left: 15px;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.write-us textarea::-webkit-input-placeholder {
+  padding-top: 12px;
+}
+
+.contacts .write-button {
+  background-color: #fb565a;
+  width: 220px;
+  height: 50px;
+  border-radius: 4px;
+  margin-top: 40px;
+}
+
+.write-us .field {
+  margin-top: 10px;
+}
+
+.write-us div {
+  margin-bottom: 25px;
+}
+
+.write-us .send {
+  width: 160px;
+  height: 50px;
+  margin-top: 40px;
+}
+
+.close-button img:hover {
+  content: url(../img/close-cross1.png);
+}
+
+.close-button img:active {
+  content: url(../img/close-cross2.png);
+}
+
+.write-us input:hover,
+.write-us textarea:hover {
+  border-color: #b4b9bb;
+  color: black;
+}
+
+.write-us .field:hover .field::-webkit-input-placeholder {
+  color: red;
+}
+
+.write-us input:invalid,
+.write-us textarea:invalid {
+  border-color: #e74246;
+  color: #e74246;
 }

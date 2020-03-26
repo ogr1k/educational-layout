@@ -33,3 +33,29 @@ function init() {
 
   myMap.geoObjects.add(placeMark);
 }
+
+let writeButtonElement = document.querySelector(".write-button");
+let writePopUp = document.querySelector(".write-us");
+let closeButtonPopUpElement = document.querySelector(".close-button");
+
+function openPopUp() {
+  writePopUp.hidden = false;
+  writeButtonElement.removeEventListener("click", openPopUp);
+  closeButtonPopUpElement.addEventListener("click", closePopUp);
+  window.addEventListener("keydown", keyPress);
+}
+
+function closePopUp() {
+  writePopUp.hidden = true;
+  writeButtonElement.addEventListener("click", openPopUp);
+  closeButtonPopUpElement.removeEventListener("click", closePopUp);
+  window.removeEventListener("keydown", keyPress);
+}
+
+function keyPress(e) {
+  if (e.key === "Escape") {
+    closePopUp();
+  }
+}
+
+writeButtonElement.addEventListener("click", openPopUp);
