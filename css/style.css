@@ -543,6 +543,8 @@ legend {
   padding-left: 15px;
   font-size: 16px;
   line-height: 18px;
+  color: #444444;
+  opacity: 0.5;
 }
 
 .write-us textarea::-webkit-input-placeholder {
@@ -582,15 +584,14 @@ legend {
 .write-us input:hover,
 .write-us textarea:hover {
   border-color: #b4b9bb;
+}
+
+.write-us .field:focus,
+.write-us .textarea:focus {
+  border-color: black;
+}
+
+.write-us .field:focus::-webkit-input-placeholder,
+.write-us .textarea:focus::-webkit-input-placeholder {
   color: black;
-}
-
-.write-us .field:hover .field::-webkit-input-placeholder {
-  color: red;
-}
-
-.write-us input:invalid,
-.write-us textarea:invalid {
-  border-color: #e74246;
-  color: #e74246;
 }
