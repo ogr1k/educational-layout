@@ -6,155 +6,204 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:500&display=swap&subset=cyrillic" rel="stylesheet">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=debc3d75-702d-4911-9cc0-27730c219a6d
+    &lang=ru_RU" type="text/javascript">
+    </script>
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="catalog-body">
     <header class="main-header">
-        <img src="img/index.html.png" alt="лого" class="main-logo">
-        <nav class="main-navigation">
-            <ul class="site-navigation">
-                <li><a href=''>СТУДИЯ</a></li>
-                <li><a href=''>КЛИЕНТЫ</a></li>
-                <li><a href=''>МАГАЗИН</a></li>
-                <li><a href=''>КОНТАКТЫ</a></li>
-            </ul>
-            <ul class="cart">
-                <li>КОРЗИНА</li>
-            </ul>
-        </nav>
-        <h1>Магазин готовых шаблонов</h1>
+        <div class="container">
+            <nav class="main-navigation">
+                <a href="index.html"><img src="img/index.html.png" alt="лого" class="main-logo"></a>
+                <ul class="site-navigation">
+                    <li><a href='index.html'>Студия</a></li>
+                    <li><a href='#'>Клиенты</a></li>
+                    <li><a href='catalog.html'>Магазин</a></li>
+                    <li><a href='#'>Контакаты</a></li>
+                </ul>
+                <ul class="cart">
+                    <li><a href="">Корзина</a></li>
+                </ul>
+            </nav>
+            <h1 class="header">Магазин готовых шаблонов</h1>
+        </div>
     </header>
     <main class="container">
-        <form action="https://echo.htmlacademy.ru/" method="get" class="filter">
-            <fieldset class="price-filters">
-                <legend>Стоимость:</legend><br>
-                <input type="range" min="0" max="15000">
-                <p><label for="">
-                        От
-                        <output>0</output>
-                    </label>
-                    <label for="">
-                        До
-                        <output>15 000</output>
-                    </label></p>
-            </fieldset>
+        <div class="catalog-flexbox">
+            <div class="catalog-filter">
+                <form action="https://echo.htmlacademy.ru/" method="get" class="filter">
+                    <fieldset class="price-filters">
+                        <legend>Стоимость:</legend>
+                        <div class="range">
+                            <div class="straight">
+                                <img class='slider left' src="img/catalog/filter-button.png" alt="">
+                                <img class='slider right' src="img/catalog/filter-button.png" alt="">
+                            </div>
+                        </div>
+                        <label for="">
+                            От
+                            <span class="price-range first-price">0</span>
+                        </label>
+                        <label for="">
+                            До
+                            <span class="price-range second-price">7500</span>
+                        </label>
+                    </fieldset>
 
-            <fieldset class="grid-type">
-                <legend>Сетка:</legend>
-                <ul>
-                    <li>
-                        <label>
-                            <input type="radio" name="grid" checked>
-                            Адаптивная
-                        </label>
+                    <fieldset class="grid-type">
+                        <legend>Сетка:</legend>
+                        <ul>
+                            <li>
+                                <input type="radio" id="adaptive" name="grid" checked>
+                                <label for="adaptive">Адаптивная</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="fixed" name="grid">
+                                <label for="fixed">Фиксированная</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="luquid" name="grid">
+                                <label for="luquid"> Резиновая</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+
+                    <fieldset class="features">
+                        <ul>
+                            <legend>Особенности:</legend>
+                            <li>
+                                <input type="checkbox" name="slider" id="slider" checked>
+                                <label id="slider"> Слайдер</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="advantages" id="advantages">
+                                <label for="advantages"> Блок преимуществ</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="news" id="news" checked>
+                                <label for="news"> Новости</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="gallery" name="gallery">
+                                <label for="gallery">Галерея</label>
+                            </li>
+                            <li>
+                                <input id="cart" type="checkbox" name="cart">
+                                <label for="cart"> Корзина</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <button class="btn-show">Показать</button> <br>
+                </form>
+            </div>
+            <div class="mackets-wrapp">
+                <div class="catalog-sorting">
+                    <strong>Сортировать:</strong>
+                    <ul class="filter-mackets">
+                        <li>
+
+                            <input class="filter" type="radio" id="price" name="sorting" checked>
+                            <label for="price">По цене</label>
+
+                        </li>
+                        <li>
+
+                            <input class="filter" type="radio" id="type" name="sorting">
+                            <label for="type">По типу</label>
+
+                        </li>
+                        <li>
+
+                            <input class="filter" type="radio" id="name" name="sorting">
+                            <label for="name">По названию</label>
+
+                        </li>
+                        <li class="arrows">
+                            <form action="#">
+                                <input type="radio" id="increase" name="sorting" checked>
+                                <label for="increase"></label>
+
+                                <input type="radio" id="decrease" name="sorting">
+                                <label for="decrease"></label>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="mackets">
+                    <li><img src="img/catalog/img-sedona.jpg.png" alt="макет">
+                        <div class="mask">
+                            <h4>Sedona</h4>
+                            <p>Информационный сайт <br> для туристов</p>
+                            <a href=""
+                                class="order-button site-button button-decoration red-button"><span>Заказать</span></a>
+                        </div>
                     </li>
-                    <li>
-                        <label>
-                            <input type="radio" name="grid">
-                            Фиксированная
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="radio" name="grid">
-                            Резиновая
-                        </label>
-                    </li>
+                    <li><img src="img/catalog/img-pink.jpg.png" alt="макет"></li>
+                    <li><img src="img/catalog/img-barbershop.jpg.png" alt="макет"></li>
+                    <li><img src="img/catalog/img-mishka.jpg.png" alt="макет"></li>
+                    <li><img src="img/catalog/img-aplus.jpg.png" alt="макет"></li>
+                    <li><img src="img/catalog/img-kvast.jpg.jpg" alt="макет"></li>
                 </ul>
-            </fieldset>
-
-            <fieldset class="features">
-                <legend>Особенности:</legend>
-                <li>
-                    <label>
-                        <input type="checkbox" name="slider" checked>
-                        Слайдер
-                    </label>
-                </li>
-                <li>
-                    <label>
-                        <input type="checkbox" name="advantages">
-                        Блок преимуществ
-                    </label>
-                </li>
-                <li>
-                    <label>
-                        <input type="checkbox" name="news" checked>
-                        Новости
-                    </label>
-                </li>
-                <li>
-                    <label>
-                        <input type="checkbox" name="gallery">
-                        Галерея
-                    </label>
-                </li>
-                <li>
-                    <label>
-                        <input type="checkbox" name="cart">
-                        Корзина
-                    </label>
-                </li>
-            </fieldset>
-            <button>Показать</button> <br>
-        </form>
-        <strong>Сортировать:</strong>
-        <ul class="filter-mackets">
-            <li>По цене</li>
-            <li>По типу</li>
-            <li>По названия</li>
-        </ul>
-        <ul class="mackets">
-            <li><img src="" alt="макет"></li>
-            <li><img src="" alt="макет"></li>
-            <li><img src="" alt="макет"></li>
-            <li><img src="" alt="макет"></li>
-            <li><img src="" alt="макет"></li>
-            <li><img src="" alt="макет"></li>
-        </ul>
-        <ul class="pagination-list">
-            <li class="pagination-item">1</li>
-            <li class="pagination-item">2</li>
-            <li class="pagination-item">3</li>
-            <li class="pagination-item">Следующая</li>
-        </ul>
-        <form action="https://echo.htmlacademy.ru/" method="POST">
-            <fieldset>
-                <legend>Напишите нам</legend>
-                <label>
-                    Ваше имя:
-                    <input type="text" name="name" placeholder="Имя Фамилия" required>
-                </label>
-                <label>
-                    Ваш e-mail:
-                    <input type="email" name="email" placeholder="email@example.com" required>
-                </label>
-                <label>
-                    Текст письма:
-                    <textarea name="text" cols="20" rows="5" placeholder="В свободной форме" required>
-                    </textarea>
-                </label>
-            </fieldset>
-            <button>Отправить</button>
-        </form>
+                <ul class="pagination-list">
+                    <li class="pagination-item">1</li>
+                    <li class="pagination-item">2</li>
+                    <li class="pagination-item">3</li>
+                    <li class="pagination-item next">Следующая</li>
+                </ul>
+            </div>
+        </div>
     </main>
     <footer>
-        <section class="contacts">
-            <h3>NЁRDS DESIGN STUDIO</h3>
-            <p>191186, Санкт-Петербург, </br>
-                ул. Б. Конюшенная, д. 19/8</p>
-            <p>тел. +7 (812) 275-75-75</p>
-            <a href="">Напишите нам</a>
-        </section>
-        <ul class="social-logos">
-            <li><a href=""><img src="" alt="vk"></a></li>
-            <li><a href=""><img src="" alt="facebook"></a></li>
-            <li><a href=""><img src="" alt="instagram"></a></li>
-        </ul>
-        <p><b>Давайте дружить, это выгодно!</b></p>
-        <p>Скидка 10% для друзей из социальных сетей.</p>
+        <div id="map" style="width: 100%; height: 415px"></div>
+        <div class="container">
+            <div class="write-us" hidden>
+                <form action="#" method="get">
+                    <fieldset>
+                        <p>
+                            <legend>Напишите нам</legend>
+                            <button class="close-button" type="button"><img src="img/close-cross.png" alt=""></button>
+                        </p>
+                        <div>
+                            <label for="name">Ваше имя:
+                                <input type="text" placeholder="Имя Фамилия" id="name" class="field" min="5">
+                            </label>
+                        </div>
+                        <div>
+                            <label for="email">Ваш e-mail:
+                                <input type="e-mail" id="email" placeholder="email@example.com" class="field">
+                            </label>
+                        </div>
+                        <label for="text">Текст письма:</label><br>
+                        <textarea placeholder="В свободной форме" id="text" cols="30" rows="10"
+                            class="field"></textarea>
+                        <a class="send button-decoration red-button"><span>Отправить</span></a>
+                    </fieldset>
+            </div>
+
+            <section class="contacts">
+                <h3>NЁRDS DESIGN STUDIO</h3>
+                <p>191186, Краснодар, </br>
+                    ул. Ставропольская, д. 127</p>
+                <p>тел. +7 (812) 275-75-75</p>
+                <a class="write-button button-decoration red-button"><span>Напишите нам</span></a>
+            </section>
+            <div class="footer-flex-container">
+                <ul class="social-logos">
+                    <li><a href=""><img src="img/vk-icon.svg" alt="vk"></a></li>
+                    <li><a href=""><img src="img/fb-icon.svg" alt="facebook"></a></li>
+                    <li><a href=""><img src="img/insta-icon.svg" alt="instagram"></a></li>
+                </ul>
+                <div class="wrapper">
+                    <p><b>Давайте дружить, это выгодно!</b></p>
+                    <p class="sale">Скидка 10% для друзей из социальных сетей.</p>
+                </div>
+            </div>
     </footer>
+    <script src="js/drag-and-drop.js"></script>
+    <script src="js/yandex-map-popup.js"></script>
 </body>
 
 </html>
